@@ -62,8 +62,11 @@ h1 {
 }
 
 .subtitle {
-  margin: 0;
+  margin: 0.45rem 0 0;
   color: var(--muted);
+  max-width: 78ch;
+  line-height: 1.45;
+  font-size: 0.98rem;
 }
 
 .controls {
@@ -319,6 +322,17 @@ h3 {
   .app-shell {
     margin: 1rem auto;
     padding: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    margin: 0.2rem 0 0.35rem;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .controls {
