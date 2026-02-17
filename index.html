@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Weather with a K</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Weather Snapshot</p>
+        <h1>Daily Weather with a K</h1>
+        <p class="subtitle">Track today and the next 7 days for any city.</p>
+      </header>
+
+      <section class="controls">
+        <form id="search-form" class="search">
+          <label for="city-input" class="visually-hidden">City</label>
+          <input
+            id="city-input"
+            name="city"
+            type="text"
+            placeholder="Search city (e.g. Austin)"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+        <button id="geo-btn" class="ghost-btn" type="button">Use my location</button>
+      </section>
+
+      <section id="status" class="status" aria-live="polite">Loading weather...</section>
+
+      <section id="weather-view" class="weather-view hidden">
+        <article class="today-card">
+          <div>
+            <p id="location-label" class="location-label"></p>
+            <div class="today-main">
+              <span id="today-icon" class="today-icon" aria-hidden="true"></span>
+              <div>
+                <p class="today-primary-label">Weather with a K</p>
+                <h2 id="today-k-primary"></h2>
+              </div>
+            </div>
+            <p id="today-condition" class="today-condition"></p>
+            <p id="today-temp" class="today-temp-secondary"></p>
+          </div>
+          <dl class="today-stats">
+            <div>
+              <dt>High</dt>
+              <dd id="today-high"></dd>
+            </div>
+            <div>
+              <dt>Low</dt>
+              <dd id="today-low"></dd>
+            </div>
+            <div>
+              <dt>Precip</dt>
+              <dd id="today-rain"></dd>
+            </div>
+            <div>
+              <dt>Wind</dt>
+              <dd id="today-wind"></dd>
+            </div>
+            <div>
+              <dt>Feels Like</dt>
+              <dd id="today-feels-like"></dd>
+            </div>
+            <div>
+              <dt>Weather with a K</dt>
+              <dd id="today-k-weather"></dd>
+            </div>
+          </dl>
+        </article>
+
+        <section>
+          <h3>7-Day Forecast</h3>
+          <div id="forecast-grid" class="forecast-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
